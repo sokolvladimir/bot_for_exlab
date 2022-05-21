@@ -1,18 +1,17 @@
-import sqlite3
+from db.database_connector import ConnectorToDB
 
 
-class Database:
-    """Класс для работы с БД"""
+class ORM:
     def __init__(self, db_file):
-        self.connection = sqlite3.connect(db_file)
-        self.cursor = self.connection.cursor()
+        self.cursor = ConnectorToDB(db_file)
 
     def read_user(self, user_id, message):
         """Метод который выводит данные о пользователе из БД"""
-        for user in self.cursor.execute("SELECT user_name, city FROM exlab WHERE user_id = ?", (user_id,)):
-            return message.answer(f"Имя: {user[0]}\nГород: {user[1]}")
-        else:
-            return message.answer("Нет пользователя")
+        user = self.cursor.get(['user_name', 'city'], {'user_id': user_id}, 1)
+        msg = "Нет пользователя"
+        if user:
+            msg = (f"Имя: {user[0]}\nГород: {user[1]}")
+        return message.answer(msg)
 
     def user_del(self, user_id):
         """Метод удаляющий юзера из БД"""
