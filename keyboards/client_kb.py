@@ -2,7 +2,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, \
     InlineKeyboardButton, InlineKeyboardMarkup
 import emoji
 
-
 social_media = InlineKeyboardMarkup(inline_keyboard=[
     [
         InlineKeyboardButton("Instagram", url="https://instagram.com/exlab_startup?igshid=YmMyMTA2M2Y="),
@@ -38,7 +37,7 @@ kb_speciality = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
     ],
     [
         InlineKeyboardButton(text=emoji.emojize(':man_technologist:') + "Mobile development",
-                         callback_data="speciality_mobile_dev"),
+                             callback_data="speciality_mobile_dev"),
         InlineKeyboardButton(text=emoji.emojize(':detective:') + "Recruiter, HR", callback_data="speciality_recruiter")
 
     ],
