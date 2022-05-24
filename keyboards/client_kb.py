@@ -5,12 +5,12 @@ import emoji
 
 social_media = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton("Instagram", url="https://www.instagram.com/exlab_startUP/"),
-        InlineKeyboardButton("Linkedin", url="https://www.linkedin.com/"),
+        InlineKeyboardButton("Instagram", url="https://instagram.com/exlab_startup?igshid=YmMyMTA2M2Y="),
+        InlineKeyboardButton("Linkedin", url="https://youtube.com/channel/UC-TAnVYVN7qg5dgsYQJkuvA"),
     ],
     [
         InlineKeyboardButton("Telegram", url="https://t.me/ExLabChannel"),
-        InlineKeyboardButton("YouTube", url="https://www.youtube.com/")
+        InlineKeyboardButton("YouTube", url="https://youtube.com/channel/UC-TAnVYVN7qg5dgsYQJkuvA")
     ],
     [
         InlineKeyboardButton("Правила нашего сообщества", url="https://docs.google.com/document/d/1uC"
@@ -72,23 +72,23 @@ source_exlab = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
 # Уровень владения Английским
 english_level = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="A1", callback_data="en_level_A1"),
-        InlineKeyboardButton(text="A2", callback_data="en_level_A2")
+        InlineKeyboardButton(text="Beginner (A1)", callback_data="en_level_A1"),
+        InlineKeyboardButton(text="Elementary (A2)", callback_data="en_level_A2")
     ],
     [
-        InlineKeyboardButton(text="B1", callback_data="en_level_B1"),
-        InlineKeyboardButton(text="B2", callback_data="en_level_B2")
+        InlineKeyboardButton(text="Intermediate (B1)", callback_data="en_level_B1"),
+        InlineKeyboardButton(text="Upper Intermediate (B2)", callback_data="en_level_B2")
     ],
     [
-        InlineKeyboardButton(text="C1", callback_data="en_level_C1"),
-        InlineKeyboardButton(text="C2", callback_data="en_level_C2")
+        InlineKeyboardButton(text="Advanced (C1)", callback_data="en_level_C1"),
+        InlineKeyboardButton(text="Proficiency (C2)", callback_data="en_level_C2")
     ]
 ])
 
 # Кнопка старта опроса
 start_kb_first = InlineKeyboardMarkup(inline_keyboard=[
     [
-        InlineKeyboardButton(text="Пройти тест " + emoji.emojize(':thinking_face:'),
+        InlineKeyboardButton(text="Давай начнём!" + emoji.emojize(':thinking_face:'),
                              callback_data="start_quiz")
     ]
 ])
