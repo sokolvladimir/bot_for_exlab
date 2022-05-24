@@ -84,6 +84,7 @@ english_level = InlineKeyboardMarkup(inline_keyboard=[
     ]
 ])
 
+
 # Кнопка старта опроса
 start_kb_first = InlineKeyboardMarkup(inline_keyboard=[
     [
